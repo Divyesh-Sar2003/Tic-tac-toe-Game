@@ -8,26 +8,28 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column; 
-    background-color:white;   
+    background-color:rgba(12, 8, 8, 0.205);   
 }
 h1{
     text-align: center;
     background-color: aqua;
-    padding: 20px;
+    padding: 10px;
     color: blue;
-    font-size:80px ;
+    font-size:60px ;
 }
 .game_board{
     margin-top: 20px;
+    font-size: 50px;
     display: grid;
     grid-template-columns: repeat(3,auto);
-    padding-right: 20%;
+    padding-right:0%;
 }
 .cell{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     border: 2px solid blue;
-    padding: 48%;
+    padding: 50%;
+
 }
 .cell:nth-child(1),.cell:nth-child(2),.cell:nth-child(3){
     border-top: none;
@@ -43,12 +45,12 @@ h1{
 }
 .cell:hover{
     background-color: aqua;
-}
+ }
 #button:hover{
     background-color: rgba(26, 29, 29, 0.573);
     color: aliceblue;
 }
 .button_column{
-    padding-left: 20%;
+    padding-left: 30%;
     margin-top: 20px;
 }
