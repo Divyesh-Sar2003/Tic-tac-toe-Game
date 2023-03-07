@@ -1,56 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 *{
-    padding: 0;
-    margin: 0;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
+
 body{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column; 
-    background-color:rgba(12, 8, 8, 0.205);   
+  width: 100vw;
+  height: 100vh;
+  background-color: #2f3542;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-h1{
-    text-align: center;
-    background-color: aqua;
-    padding: 10px;
-    color: blue;
-    font-size:60px ;
-}
-.game_board{
-    margin-top: 20px;
-    font-size: 50px;
-    display: grid;
-    grid-template-columns: repeat(3,auto);
-    padding-right:0%;
-}
-.cell{
-    height: 100px;
-    width: 100px;
-    border: 2px solid blue;
-    padding: 50%;
 
+.container{
+  display: grid;
+  grid-template-columns: repeat(3,auto);
 }
-.cell:nth-child(1),.cell:nth-child(2),.cell:nth-child(3){
-    border-top: none;
+
+.box{
+  width: 100px;
+  height: 100px;
+  border: 2px solid #eccc68;
+  box-shadow: 0 0 0 2px #eccc68;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+  font-size: 25px;
 }
-.cell:nth-child(1n){
-    border-left: none;
+
+#status{
+  padding: 20px;
+  font-size: 25px;
+  font-weight: 500;
 }
-.cell:nth-child(7),.cell:nth-child(8),.cell:nth-child(9){
-    border-bottom: none;
+
+button{
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  color:white;
+  background-color: #ff4757;
+  border: none;
+  border-radius: 3px;
 }
-.cell:nth-child(3n){
-    border-right: none;
+
+.win{
+    animation: winAnimation ease-in-out 1s infinite;
 }
-.cell:hover{
-    background-color: aqua;
- }
-#button:hover{
-    background-color: rgba(26, 29, 29, 0.573);
-    color: aliceblue;
-}
-.button_column{
-    padding-left: 30%;
-    margin-top: 20px;
+
+@keyframes winAnimation {
+  20%{background-color: #0099ff;}
+  100%{font: weight 900px; }
+  100%{background-color: #1500ff;}
+  
 }
